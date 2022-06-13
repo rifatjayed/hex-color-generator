@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text-area{
+    margin: 10px;
+}
+.copy-area{
+    display: flex;
+    flex-direction: row;
+}
+.copy-btn{
+    padding: 10px 20px;
+    background-color: palevioletred;
+    margin: 10px;
+    border: none; 
+    font-size: 20px;
+}
+.generate-btn{
+    padding: 10px 20px;
+    background-color: palevioletred;
+    margin: 10px;
+    border: none;
+    font-size: 20px;
+}
