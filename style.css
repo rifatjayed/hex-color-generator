@@ -29,6 +29,7 @@ body{
     margin: 10px;
     border: none; 
     font-size: 20px;
+    cursor: pointer;
 }
 .generate-btn{
     padding: 10px 20px;
@@ -36,4 +37,46 @@ body{
     margin: 10px;
     border: none;
     font-size: 20px;
+    cursor: pointer;
+}
+
+.toast-msg{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background-color: blueviolet;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.toast-message-slide-in {
+	animation: toast-animation-in 0.5s ease-in;
+}
+
+.toast-message-slide-out {
+	animation: toast-animation-out 0.5s ease-in;
+}
+
+@keyframes toast-animation-in {
+	from {
+		transform: translateX(200px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes toast-animation-out {
+	from {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+	to {
+		transform: translateX(200px);
+		opacity: 0;
+	}
 }

@@ -16,7 +16,8 @@ btn.addEventListener("click", function(){
 });
 
 copyBtn.addEventListener("click", function(){
-    navigator.clipboard.writeText(output.value)
+    navigator.clipboard.writeText(output.value);
+    generateToastMsg(`${output.value} copied`)
 })
 
 output.addEventListener("keyup", function(e){
@@ -42,3 +43,23 @@ function isValid(color) {
     // color= color.substring(1);
     return /^#?[0-9a-fA-F]{6}$/i.test(color);
 }
+
+function generateToastMsg(msg){
+
+    const div = document.createElement("div")
+    div.innerText = msg;
+    div.classList= 'toast-msg toast-message-slide-in';
+
+    div.addEventListener('click', function(){
+        div.classList.remove('toast-message-slide-in');
+        div.classList.add('toast-message-slide-out');
+
+        div.addEventListener('animationend', function(){
+            div.remove();
+        })
+    })
+
+    document.body.appendChild(div)
+}
+ 
+    
