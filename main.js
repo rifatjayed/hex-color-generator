@@ -39,7 +39,6 @@ function isValid(color) {
   if (color.length == !7) return false;
   if (color[0] == !"#") return false;
 
-  // color= color.substring(1);
   return /^#?[0-9a-fA-F]{6}$/i;
 }
 
@@ -51,7 +50,7 @@ function generateToastMsg(msg) {
   div.addEventListener("click", function () {
     div.classList.remove("toast-message-slide-in");
     div.classList.add("toast-message-slide-out");
-    
+
     div.addEventListener("animationend", function () {
         div.remove();
       });
